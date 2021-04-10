@@ -15,3 +15,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const imageListRef = document.querySelector('#gallery');
+
+images.forEach(image => {
+  const url = image.url;
+  imageListRef.insertAdjacentHTML('beforeend', '<li><img src=""></li>');
+  console.log(url);
+  imageListRef.src = url;
+});
+
+// imageListRef.insertAdjacentHTML('afterbegin', '<li><img></li>');
+// imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>');
+// imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>');
+console.log(imageListRef);
