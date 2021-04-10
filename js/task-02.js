@@ -20,5 +20,5 @@ greensEl.textContent = ingredients[4];
 const condimentsEl = document.createElement('li');
 condimentsEl.textContent = ingredients[5];
 
-const ulRef = document.querySelector('ul');
+const ulRef = document.querySelector('#ingredients');
 ulRef.append(potatoEl, mushroomEl, garlicEl, tomatoEl, greensEl, condimentsEl);
