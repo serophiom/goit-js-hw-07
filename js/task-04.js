@@ -1,27 +1,32 @@
 const counterValueEl = document.querySelector('#value');
-const counterValue = counterValueEl.textContent;
+let counterValue = Number(counterValueEl.textContent);
 console.log(counterValue);
 console.log()
 
-const incrementBtn = document.querySelector('dataset');
-console.log(incrementBtn);
+const counterBtnAll = document.querySelectorAll('button');
+
+// const decrementBtn = document.querySelector('#dataset.decrement');
+console.log(counterBtnAll[0]);
+
+// const incrementBtn = document.querySelector('button');
+console.log(counterBtnAll[1]);
 
 // decrement
 
 function increment () {
     console.log('Это increment');
     counterValue += 1;
+    counterValueEl.textContent = counterValue;
 };
 
 function decrement () {
     console.log('Это decrement');
-    // counterValue -= 1;
-    const counterValue = counterValueEl.textContent;
-    counterValueEl.textContent += 1;
+    counterValue -= 1;
+    counterValueEl.textContent = counterValue;   
 };
 
-// incrementBtn.addEventListener('click', decrement);
-// incrementBtn.addEventListener('click', increment);
+counterBtnAll[0].addEventListener('click', decrement);
+counterBtnAll[1].addEventListener('click', increment);
 
 
 
