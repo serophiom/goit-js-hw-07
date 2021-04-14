@@ -16,35 +16,54 @@ const images = [
   },
 ];
 
-
 const imageListRef = document.querySelector('#gallery');
-const liList = document.insertAdjacentHTML
+
+imageListRef.insertAdjacentHTML('beforeend', '<li><img></li><li><img></li><li><img></li>');
+const imgRefs = imageListRef.querySelectorAll('img');
+
+console.log(imgRefs);
+images.forEach ( image => {
+  imgRefs.src = images.url;
+// imgRefs[0].alt = images[0].alt;
+// imgRefs[1].src = images[1].url;
+// imgRefs[1].alt = images[1].alt;
+// imgRefs[2].src = images[2].url;
+// imgRefs[2].alt = images[2].alt;
+return 
+})
+
+
+// const imageListRef = document.querySelector('#gallery');
+// const liList = document.insertAdjacentHTML
 // images.forEach(image => {
-//   const url = image.url;
+
 //   imageListRef.insertAdjacentHTML('beforeend', '<li><img src=""></li>');
-//   console.log(url);
-//   imageListRef.src = url;
+//   const imgEl = imageListRef.querySelector('img');
+//   imgEl.src = image.url;
+//   // imageListRef.img = image.url;
+//   // imageListRef.src = "image.url";
+
+//   return imageListRef;
 // });
 
-// imageListRef.insertAdjacentHTML('afterbegin', '<li><img></li>');
-// imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>');
-// imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>');
+// // imageListRef.insertAdjacentHTML('afterbegin', '<li><img></li>');
+// // imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>');
+// // imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>');
 
-const url1 = images[0].url;
-const liEl = document.createElement('li');
-const imgEl = document.createElement('img');
+// const url1 = images[0].url;
+// const liEl = document.createElement('li');
+// const imgEl = document.createElement('img');
 
-imgEl.src = url1;
-// imageListRef.append(liEl, imgEl);
+// imgEl.src = url1;
+// // imageListRef.append(liEl, imgEl);
 
-liEl.appendChild(imgEl);
-console.log(url1);
+// liEl.appendChild(imgEl);
+// console.log(url1);
 
-// imageListRef.appendChild(liEl);
+// // imageListRef.appendChild(liEl);
 
-imageListRef.insertAdjacentHTML('beforeend', '<li><img class="image1
-"></li>');
+// imageListRef.insertAdjacentHTML('beforeend', '<li><img class="image1"></li>');
 
-console.log(imageListRef);
-console.log(images[0].url);
-console.log(images[0].alt);
+// console.log(imageListRef);
+// console.log(images[0].url);
+// console.log(images[0].alt);
