@@ -42,7 +42,8 @@ console.log(url1);
 
 // imageListRef.appendChild(liEl);
 
-imageListRef.insertAdjacentHTML('beforeend', liEl);
+imageListRef.insertAdjacentHTML('beforeend', '<li><img class="image1
+"></li>');
 
 console.log(imageListRef);
 console.log(images[0].url);
