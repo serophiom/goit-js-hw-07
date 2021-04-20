@@ -18,19 +18,40 @@ const images = [
 
 const imageListRef = document.querySelector('#gallery');
 
-imageListRef.insertAdjacentHTML('beforeend', '<li><img></li><li><img></li><li><img></li>');
-const imgRefs = imageListRef.querySelectorAll('img');
 
-console.log(imgRefs);
-images.forEach ( image => {
-  imgRefs.src = images.url;
+images.map(image => {
+  imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>')
+  // console.log(vagetabelsItem);
+  console.log(image.url);
+  console.log(image.alt);
+  img.src = image.url;
+  imageListRef.alt = image.alt;
+  // return;
+});
+
+
+
+// const vagetablesRef = ingredients.map(item => {
+//     const vagetabelsItem = document.createElement('li');
+//     vagetabelsItem.textContent = item;
+//     return vagetabelsItem;
+//   });
+
+
+// imageListRef.insertAdjacentHTML('beforeend', '<li><img></li><li><img></li><li><img></li>');
+console.log(imageListRef);
+// const imgRefs = imageListRef.querySelectorAll('img');
+
+// console.log(imgRefs);
+// images.forEach ( image => {
+//   imgRefs.src = images.url;
 // imgRefs[0].alt = images[0].alt;
 // imgRefs[1].src = images[1].url;
 // imgRefs[1].alt = images[1].alt;
 // imgRefs[2].src = images[2].url;
 // imgRefs[2].alt = images[2].alt;
-return 
-})
+// return 
+// })
 
 
 // const imageListRef = document.querySelector('#gallery');
