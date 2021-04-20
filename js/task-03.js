@@ -19,17 +19,31 @@ const images = [
 const imageListRef = document.querySelector('#gallery');
 
 
-images.map(image => {
-  imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>')
-  // console.log(vagetabelsItem);
-  console.log(image.url);
-  console.log(image.alt);
-  img.src = image.url;
-  imageListRef.alt = image.alt;
-  // return;
-});
+// const imageRefs = images.map(image => {
+//   const imgRef = document.createElement('img');
+//   console.log(imgRef);
+//   imgRef.src = image.url;
+//   imgRef.alt = image.alt;
+//   return imgRef;
+// });
 
 
+
+  const imageRefs = images.map(image => {
+    const imgRef = imageListRef.insertAdjacentHTML('beforeend', '<li><img></li>');
+    const imgRefs = document.querySelector('img');
+    imgRefs.src = image.url;
+    imgRefs.alt = image.alt;
+    console.log(imgRef);
+    
+    return imgRef;
+  });
+
+
+console.log(imageRefs);
+console.log(imageListRef);
+
+// console.log(imageListRef);
 
 // const vagetablesRef = ingredients.map(item => {
 //     const vagetabelsItem = document.createElement('li');
@@ -39,7 +53,7 @@ images.map(image => {
 
 
 // imageListRef.insertAdjacentHTML('beforeend', '<li><img></li><li><img></li><li><img></li>');
-console.log(imageListRef);
+
 // const imgRefs = imageListRef.querySelectorAll('img');
 
 // console.log(imgRefs);
