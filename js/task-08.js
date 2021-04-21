@@ -11,22 +11,33 @@ console.log(btnCreateRef);
 console.log(btnDeleteRef);
 console.log(boxesRef);
 
+let divWidth = 30;
+let divHeight = 30;
+
 const divRef = createBoxes();
 
 boxesRef.insertAdjacentHTML('beforeend', divRef);
 
 document.createElement('div');
 
+// const bgcolor = #fffff;
+
 
 function createBoxes() {
+    for (let i = 0; i <= 3; i+=1) {
+        
     return `<li>
     <div class="create-div"
-    style="background-color: #f44336;
-    width: 30px;
-    height: 30px">
+    style="background-color: #2a2a2a;
+    width: ${divWidth}px;
+    height: ${divHeight}px">
     </div>
     </li>
     `;
+    divWidth += 10;
+        divHeight += 10;
+    console.log(i);
+    }
 }
 
 function destroyBoxes() {
