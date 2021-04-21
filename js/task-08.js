@@ -14,19 +14,20 @@ console.log(boxesRef);
 let divWidth = 30;
 let divHeight = 30;
 
-const divRef = createBoxes();
 
-boxesRef.insertAdjacentHTML('beforeend', divRef);
+
+
 
 document.createElement('div');
+
+const amount = [1, 2, 3, 4];
 
 // const bgcolor = #fffff;
 
 
 function createBoxes() {
-    for (let i = 0; i <= 3; i+=1) {
-        
-    return `<li>
+    const creatDivRef = amount.map(number => {
+        return `<li>
     <div class="create-div"
     style="background-color: #2a2a2a;
     width: ${divWidth}px;
@@ -34,12 +35,18 @@ function createBoxes() {
     </div>
     </li>
     `;
-    divWidth += 10;
+        divWidth += 10;
         divHeight += 10;
-    console.log(i);
-    }
+    });
+    
+    console.dir(creatDivRef);
+    return creatDivRef;
 }
 
 function destroyBoxes() {
     
 }
+const divRef = createBoxes();
+boxesRef.insertAdjacentHTML('beforeend', divRef);
+
+console.log(createBoxes())
