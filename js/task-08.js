@@ -19,9 +19,13 @@ document.createElement('div');
 
 
 function createBoxes() {
-    return `
-    <div style="background-color: #f44336">
+    return `<li>
+    <div class="create-div"
+    style="background-color: #f44336;
+    width: 30px;
+    height: 30px">
     </div>
+    </li>
     `;
 }
 
