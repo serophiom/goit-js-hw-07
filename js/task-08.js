@@ -11,10 +11,20 @@ console.log(btnCreateRef);
 console.log(btnDeleteRef);
 console.log(boxesRef);
 
+let randomColor = Math.floor(Math.random()*16777215).toString(16);
+
 let divWidth = 30;
 let divHeight = 30;
+let color = '#2a2a2a'
 
-
+for (let i = 0; i <= 4 ; i +=1) {
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    boxesRef.insertAdjacentHTML('beforeend', `<div class="div-class" style="background-color: #${randomColor};
+    width: ${divWidth}px;
+    height: ${divHeight}px"></div>`);
+    divWidth +=10;
+    divHeight +=10;
+}
 
 
 
@@ -32,28 +42,28 @@ const divSettings = [
 ];
 
 
-function createBoxes() {
-    const creatDivRef = divSettings.map(({color, width, height}) => {
-        return `<li>
-    <div class="create-div"
-    style="background-color: ${color};
-    width: ${width}px;
-    height: ${height}px">
-    </div>
-    </li>
-    `;
-        // divWidth += 10;
-        // divHeight += 10;
-    });
+// function createBoxes() {
+//     const creatDivRef = divSettings.map(({color, width, height}) => {
+//         return `<li>
+//     <div class="create-div"
+//     style="background-color: ${color};
+//     width: ${width}px;
+//     height: ${height}px">
+//     </div>
+//     </li>
+//     `;
+//         // divWidth += 10;
+//         // divHeight += 10;
+//     });
     
-    console.dir(creatDivRef);
-    return creatDivRef;
-}
+//     console.dir(creatDivRef);
+//     return creatDivRef;
+// }
 
 function destroyBoxes() {
     
 }
-const divRef = createBoxes();
-boxesRef.insertAdjacentHTML('beforeend', divRef);
+// const divRef = createBoxes();
+// boxesRef.insertAdjacentHTML('beforeend', divRef);
 
-console.log(createBoxes())
+// console.log(createBoxes())

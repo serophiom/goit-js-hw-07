@@ -18,3 +18,7 @@ img {
 li {
   list-style: none;
 }
+
+.div-class {
+  margin: 10px;
+}
