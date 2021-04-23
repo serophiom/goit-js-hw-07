@@ -14,7 +14,6 @@ function createDiv() {
     let divWidth = 30;
     let divHeight = 30;
     destroyBoxes();
-    // boxesRef.innerHTML = '';
     for (let i = 1; i <= divCol; i += 1) {
         let randomColor = Math.floor(Math.random() * 16777215).toString(16);
         boxesRef.insertAdjacentHTML('beforeend', `<div class="div-class" style="background-color: #${randomColor};
