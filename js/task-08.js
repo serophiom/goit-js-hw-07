@@ -24,19 +24,26 @@ const amount = [1, 2, 3, 4];
 
 // const bgcolor = #fffff;
 
+const divSettings = [
+    {color: '#2a2a2a', width: '30', height: '30'},
+    {color: '#000000', width: '40', height: '40'},
+    {color: '#2a2a2a', width: '50', height: '50'},
+    {color: '#2a2a2a', width: '60', height: '60'},
+];
+
 
 function createBoxes() {
-    const creatDivRef = amount.map(number => {
+    const creatDivRef = divSettings.map(({color, width, height}) => {
         return `<li>
     <div class="create-div"
-    style="background-color: #2a2a2a;
-    width: ${divWidth}px;
-    height: ${divHeight}px">
+    style="background-color: ${color};
+    width: ${width}px;
+    height: ${height}px">
     </div>
     </li>
     `;
-        divWidth += 10;
-        divHeight += 10;
+        // divWidth += 10;
+        // divHeight += 10;
     });
     
     console.dir(creatDivRef);
