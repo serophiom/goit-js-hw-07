@@ -20,5 +20,8 @@ li {
 }
 
 .div-class {
+  display: inline-flex;
+
   margin: 10px;
+  border: 1px solid #000000;
 }
