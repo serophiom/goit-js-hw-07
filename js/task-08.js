@@ -27,3 +27,5 @@ function createDiv() {
 function destroyBoxes() {
     boxesRef.innerHTML = '';
 }
+
+
